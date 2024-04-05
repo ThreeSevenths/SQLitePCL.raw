@@ -57,3 +57,8 @@ jobs:
       run: |
         cd SQLitePCL.raw/build
         dotnet run
+    - name: Upload for test
+      uses: actions/upload-artifact@v3
+      with:
+        name: debug
+        path: ./
