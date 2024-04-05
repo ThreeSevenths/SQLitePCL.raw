@@ -58,3 +58,8 @@ jobs:
       run: |
         cd SQLitePCL.raw/build
         dotnet run
+    - name: Upload nupkgs
+      uses: actions/upload-artifact@v3
+      with:
+        path: ./nupkgs
+        name: nupkgs

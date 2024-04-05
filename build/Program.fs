@@ -72,8 +72,13 @@ let main argv =
         "bundle_sqlite3"
     ]
     for s in pack_dirs do
-        let dir_name = sprintf "SQLitePCLRaw.%s" s
-        exec "dotnet" "pack -c Release" (Path.Combine(top, "src", dir_name))
+        let dir_name1 = sprintf "SQLitePCLRaw.%s" s
+        let dir_name2 = sprintf "SQLiteSpellfix.%s" s
+        if Directory.Exists(Path.Combine(top, "src", dir_name1)) then
+            exec "dotnet" "pack -c Release" (Path.Combine(top, "src", dir_name1))
+        elif Directory.Exists(Path.Combine(top, "src", dir_name2)) then
+            exec "dotnet" "pack -c Release" (Path.Combine(top, "src", dir_name2))
+        
 
     let get_build_prop p =
         let path_xml = Path.Combine(top, "Directory.Build.props")
