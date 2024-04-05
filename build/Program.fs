@@ -34,7 +34,7 @@ let main argv =
     ]
 
     for s in nuspec_dirs do
-        let name = sprintf "SQLitePCLRaw.%s" s
+        let name = sprintf "SQLiteSpellfix.%s" s
         let dir_proj = Path.Combine(top, "src", name)
         let path_empty = Path.Combine(dir_proj, "_._")
         if not (File.Exists(path_empty)) then

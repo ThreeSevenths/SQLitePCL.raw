@@ -55,12 +55,6 @@ jobs:
     - name: Install T4
       run: dotnet tool install --global dotnet-t4
     - name: Build
-      continue-on-error: true
       run: |
         cd SQLitePCL.raw/build
         dotnet run
-    - name: Upload for test
-      uses: actions/upload-artifact@v3
-      with:
-        name: debug
-        path: ./
