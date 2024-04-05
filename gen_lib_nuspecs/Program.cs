@@ -35,7 +35,7 @@ public enum TFM
 
 public static class common
 {
-    public const string ROOT_NAME = "SQLitePCLRaw";
+    public const string ROOT_NAME = "SQLiteSpellfix";
 
     public static string AsString(this TFM e)
     {
@@ -73,7 +73,7 @@ public static class common
         f.WriteEndElement(); // file
     }
 
-    const string PACKAGE_TAGS = "sqlite;xamarin";
+    const string PACKAGE_TAGS = "sqlite;xamarin;sqlcipher;spellfix";
 
     public static void write_nuspec_common_metadata(
         string id,
@@ -91,7 +91,7 @@ public static class common
         write_license(f);
         f.WriteStartElement("repository");
         f.WriteAttributeString("type", "git");
-        f.WriteAttributeString("url", "https://github.com/ericsink/SQLitePCL.raw");
+        f.WriteAttributeString("url", "https://github.com/threesevenths/SQLitePCL.raw");
         f.WriteEndElement(); // repository
         f.WriteElementString("summary", "$summary$");
         f.WriteElementString("tags", PACKAGE_TAGS);
@@ -465,7 +465,7 @@ public static class gen
 
             f.WriteStartElement("metadata");
             common.write_nuspec_common_metadata(id, f);
-            f.WriteElementString("description", "This package contains platform-specific native code builds of SQLite for use with SQLitePCLRaw.  To use this, you need SQLitePCLRaw.core as well as one of the SQLitePCLRaw.provider.* packages.  Convenience packages are named SQLitePCLRaw.bundle_*.");
+            f.WriteElementString("description", "This package contains platform-specific native code builds of SQLite with spellfix for use with SQLitePCLRaw.  To use this, you need SQLitePCLRaw.core as well as one of the SQLitePCLRaw.provider.* packages.  Convenience packages are named SQLitePCLRaw.bundle_*.");
 
             f.WriteEndElement(); // metadata
 
@@ -566,7 +566,7 @@ public static class gen
 
             f.WriteStartElement("metadata");
             common.write_nuspec_common_metadata(id, f);
-            f.WriteElementString("description", "This package contains platform-specific native code builds of SQLCipher (see sqlcipher/sqlcipher on GitHub) for use with SQLitePCLRaw.  Note that these sqlcipher builds are unofficial and unsupported.  For official sqlcipher builds, contact Zetetic.  To use this package, you need SQLitePCLRaw.core as well as one of the SQLitePCLRaw.provider.* packages.  Convenience packages are named SQLitePCLRaw.bundle_*.");
+            f.WriteElementString("description", "This package contains platform-specific native code builds of SQLCipher (see sqlcipher/sqlcipher on GitHub) with spellfix for use with SQLitePCLRaw.  Note that these sqlcipher builds are unofficial and unsupported.  For official sqlcipher builds, contact Zetetic.  To use this package, you need SQLitePCLRaw.core as well as one of the SQLitePCLRaw.provider.* packages.  Convenience packages are named SQLitePCLRaw.bundle_*.");
 
             f.WriteEndElement(); // metadata
 
@@ -623,7 +623,7 @@ public static class gen
 
             f.WriteStartElement("metadata");
             common.write_nuspec_common_metadata(id, f);
-            f.WriteElementString("description", "This package contains platform-specific native code builds of SQLite3 Multiple Ciphers (see utelle/SQLite3MultipleCiphers on GitHub) for use with SQLitePCLRaw.  To use this package, you need SQLitePCLRaw.core as well as one of the SQLitePCLRaw.provider.* packages.  Convenience packages are named SQLitePCLRaw.bundle_*.");
+            f.WriteElementString("description", "This package contains platform-specific native code builds of SQLite3 Multiple Ciphers (see utelle/SQLite3MultipleCiphers on GitHub) with spellfix for use with SQLitePCLRaw.  To use this package, you need SQLitePCLRaw.core as well as one of the SQLitePCLRaw.provider.* packages.  Convenience packages are named SQLitePCLRaw.bundle_*.");
 
             f.WriteEndElement(); // metadata
 

@@ -22,7 +22,7 @@ using System.Xml;
 
 public static class gen
 {
-    public const string ROOT_NAME = "SQLitePCLRaw";
+    public const string ROOT_NAME = "SQLiteSpellfix";
 
     public const int MAJOR_VERSION = 2;
     public const int MINOR_VERSION = 1;
@@ -66,10 +66,10 @@ public static class gen
 
     private const string NUSPEC_RELEASE_NOTES = "TODO url";
 
-    const string COPYRIGHT = "Copyright 2014-2023 SourceGear, LLC";
-    const string AUTHORS = "Eric Sink";
-    const string SUMMARY = "SQLitePCLRaw is a Portable Class Library (PCL) for low-level (raw) access to SQLite";
-    const string PACKAGE_TAGS = "sqlite";
+    const string COPYRIGHT = "Copyright 2014-2024 SourceGear, LLC";
+    const string AUTHORS = "Eric Sink et. al.";
+    const string SUMMARY = "SQLiteSpellfix is a Portable Class Library (PCL) for low-level (raw) access to SQLite including the spellfix1 module.";
+    const string PACKAGE_TAGS = "sqlite;spellfix;sqlcipher";
     //const string PACKAGE_TAGS = "sqlite;xamarin";
 
     private static void gen_directory_build_props(string root, string nupkgs_dir_name)
@@ -98,7 +98,7 @@ public static class gen
             f.WriteElementString("PackageLicenseExpression", "Apache-2.0");
             f.WriteElementString("PackageRequireLicenseAcceptance", "false");
             f.WriteElementString("PackageTags", PACKAGE_TAGS);
-            f.WriteElementString("RepositoryUrl", "https://github.com/ericsink/SQLitePCL.raw");
+            f.WriteElementString("RepositoryUrl", "https://github.com/threesevenths/SQLitePCL.raw");
             f.WriteElementString("RepositoryType", "git");
             f.WriteElementString("PackageOutputPath", string.Format("$([System.IO.Path]::Combine($(MSBuildThisFileDirectory), '{0}'))", nupkgs_dir_name));
 
