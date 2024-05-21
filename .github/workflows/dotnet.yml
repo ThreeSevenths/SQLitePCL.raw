@@ -58,6 +58,12 @@ jobs:
       run: |
         cd SQLitePCL.raw/build
         dotnet run
+      continue-on-error: true
+    - name: Upload folder structure for debugging
+      uses: actions/upload-artifact@v3
+      with: 
+        name: debug
+        path: ./
     - name: Upload nupkgs
       uses: actions/upload-artifact@v3
       with:
