@@ -37,12 +37,12 @@ let main argv =
         let name = sprintf "SQLiteSpellfix.%s" s
         let dir_proj = Path.Combine(top, "src", name)
         let path_empty = Path.Combine(dir_proj, "_._")
-        if not (File.Exists(path_empty)) then
+        if Directory.Exists(dir_proj) and not (File.Exists(path_empty)) then
             File.WriteAllText(path_empty, "")
         let name = sprintf "SQLitePCLRaw.%s" s
         let dir_proj = Path.Combine(top, "src", name)
         let path_empty = Path.Combine(dir_proj, "_._")
-        if not (File.Exists(path_empty)) then
+        if Directory.Exists(dir_proj) and not (File.Exists(path_empty)) then
             File.WriteAllText(path_empty, "")
 
     let pack_dirs = [
