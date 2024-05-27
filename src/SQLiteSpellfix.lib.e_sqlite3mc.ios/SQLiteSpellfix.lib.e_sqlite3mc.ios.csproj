@@ -10,8 +10,7 @@
 	<ItemGroup>
 		<None Include="$(cb_bin_path)\e_sqlite3mc\ios\device\e_sqlite3mc.a" Pack="true" PackagePath="static\device" />
 		<None Include="$(cb_bin_path)\e_sqlite3mc\ios\simulator\e_sqlite3mc.a" Pack="true" PackagePath="static\simulator" />
-		<None Include="SQLitePCLRaw.lib.e_sqlite3mc.ios.targets" Pack="true" PackagePath="build" />
-		<None Include="SQLitePCLRaw.lib.e_sqlite3mc.ios.targets" Pack="true" PackagePath="buildTransitive" />
+		<None Include="SQLiteSpellfix.lib.e_sqlite3mc.ios.targets" Pack="true" PackagePath="build" />
+		<None Include="SQLiteSpellfix.lib.e_sqlite3mc.ios.targets" Pack="true" PackagePath="buildTransitive" />
 	</ItemGroup>
 </Project>
-
